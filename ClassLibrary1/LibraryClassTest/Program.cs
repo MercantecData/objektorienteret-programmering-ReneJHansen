@@ -8,6 +8,29 @@ namespace LibraryClassTest
     {
         static void Main(string[] args)
         {
+            // Assignments have been split into different functions
+
+            Console.WriteLine("Choose assignment:\n1: Library assignment\n2: Dictionary assignment");
+            string input = Console.ReadLine();
+            if (input == "1")
+            {
+                Console.Clear();
+                LibraryTest(); // Hovedsektion
+            }
+            else if (input == "2")
+            {
+                Console.Clear();
+                DictionaryTest(); //Dictionaries
+            }
+            else
+            {
+                Console.WriteLine("Wrong input");
+            }
+        }
+
+        static void LibraryTest()
+        {
+            // Variables used in this program
             List<Person> personRegister = new List<Person>();
             List<Job> jobRegister = new List<Job>();
             string confirm;
@@ -39,18 +62,51 @@ namespace LibraryClassTest
                 confirm = Console.ReadLine();
                 Console.WriteLine();
 
-                if(confirm.ToLower() == "n")
+                if (confirm.ToLower() == "n")
                 {
                     isRunning = false;
                 }
-
             }
+
+            // After you are done adding entries, the program write the list out for you
             for (int i = 0; i < personRegister.Count; i++)
             {
                 Console.WriteLine($"{personRegister[i].name} {personRegister[i].age}");
                 Console.WriteLine($"{jobRegister[i].title} {jobRegister[i].salary} \n");
             }
 
+        }
+
+        static void DictionaryTest()
+        {
+            IDictionary<string, int> opgave1 = new Dictionary<string, int>();
+            IDictionary<float, bool> opgave2 = new Dictionary<float, bool>();
+
+            Console.WriteLine("Opgave 1: Dictionary med string KEY og int VALUE");
+            for (int i = 0; i < 10; i++)
+            {
+                opgave1.Add($"{i}", i);
+            }
+            foreach (KeyValuePair<string, int> item in opgave1)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+            }
+
+            Console.ReadKey();
+
+            Console.WriteLine("\nOpgave2: Dictionary med float KEY og bool VALUE");
+            for (float i = 0.0F; i < 10.0; i++)
+            {
+                opgave2.Add(i, true);
+            }
+            foreach (KeyValuePair<float, bool> item in opgave2)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+            }
+            Console.ReadKey();
+            // This is just one way of adding to the dictionary
+            // Another is by using dictionaryVariable.Add("KEY", VALUE); ten times
+            // For the purpose of the assignment "Add ten items" using a loop simplifies it massively
         }
     }
 }
