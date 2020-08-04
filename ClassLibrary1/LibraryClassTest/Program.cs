@@ -31,8 +31,9 @@ namespace LibraryClassTest
         static void LibraryTest()
         {
             // Variables used in this program
-            List<Person> personRegister = new List<Person>();
-            List<Job> jobRegister = new List<Job>();
+            var register = new Register();
+            var personRegister = register.GetPersons();
+            var jobRegister = register.GetJobs();
             string confirm;
             bool isRunning = true;
 
