@@ -6,8 +6,8 @@ namespace ClassLibrary1
 {
     public class Register
     {
-        List<Person> personRegister = new List<Person>();
-        List<Job> jobRegister = new List<Job>();
+        private List<Person> personRegister = new List<Person>();
+        private List<Job> jobRegister = new List<Job>();
 
         public List<Person> GetPersons()
         {

@@ -1,6 +1,7 @@
 ﻿using ClassLibrary1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LibraryClassTest
 {
@@ -34,6 +35,8 @@ namespace LibraryClassTest
             var register = new Register();
             var personRegister = register.GetPersons();
             var jobRegister = register.GetJobs();
+            var dictionary = new CustomDictionary(); // Bonus Opgave
+            var personDictionary = dictionary.PersonDictionary();
             string confirm;
             bool isRunning = true;
 
@@ -56,6 +59,9 @@ namespace LibraryClassTest
 
                 Job job = new Job(title, payment);
                 Person person = new Person(name, age, job);
+                Person personDic = new Person(name, age);
+                personDictionary.Add(personDic, age);
+
                 jobRegister.Add(job);
                 personRegister.Add(person);
 
@@ -74,14 +80,18 @@ namespace LibraryClassTest
             {
                 Console.WriteLine($"{personRegister[i].name} {personRegister[i].age}");
                 Console.WriteLine($"{jobRegister[i].title} {jobRegister[i].salary} \n");
+                Console.WriteLine(personDictionary.Keys.ElementAt(i).name);
+                Console.WriteLine(personDictionary.Keys.ElementAt(i).age);
             }
 
         }
 
         static void DictionaryTest()
         {
-            IDictionary<string, int> opgave1 = new Dictionary<string, int>();
-            IDictionary<float, bool> opgave2 = new Dictionary<float, bool>();
+
+            var dictionary = new CustomDictionary();
+            var opgave1 = dictionary.Opgave1();
+            var opgave2 = dictionary.Opgave2();
 
             Console.WriteLine("Opgave 1: Dictionary med string KEY og int VALUE");
             for (int i = 0; i < 10; i++)
