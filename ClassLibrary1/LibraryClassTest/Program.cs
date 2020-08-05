@@ -11,7 +11,7 @@ namespace LibraryClassTest
         {
             // Assignments have been split into different functions
 
-            Console.WriteLine("Choose assignment:\n1: Library assignment\n2: Dictionary assignment");
+            Console.WriteLine("Choose assignment:\n1: Library assignment\n2: Dictionary assignment\n3: MathClass Assignment");
             string input = Console.ReadLine();
             if (input == "1")
             {
@@ -22,6 +22,11 @@ namespace LibraryClassTest
             {
                 Console.Clear();
                 DictionaryTest(); //Dictionaries
+            }
+            else if (input == "3")
+            {
+                Console.Clear();
+                MathTest();
             }
             else
             {
@@ -119,6 +124,16 @@ namespace LibraryClassTest
             // This is just one way of adding to the dictionary
             // Another is by using dictionaryVariable.Add("KEY", VALUE); ten times
             // For the purpose of the assignment "Add ten items" using a loop simplifies it massively
+        }
+
+        static void MathTest()
+        {
+            // ClassLibrary.math is to differenciate between the pre-coded Math class and my custom Math class
+            ClassLibrary1.Math math = new ClassLibrary1.Math();
+            
+            Console.WriteLine("int: 2 + 2 = " + math.Plus(2, 2));
+            Console.WriteLine("float: 2.2 + 2.2 = " + math.Plus(2.2f, 2.2f));
+            Console.WriteLine("string: \"2\" + \"2\" = " + math.Plus("2", "2"));
         }
     }
 }
