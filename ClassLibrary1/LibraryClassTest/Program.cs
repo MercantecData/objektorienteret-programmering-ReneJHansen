@@ -88,10 +88,10 @@ namespace LibraryClassTest
 
         static void DictionaryTest()
         {
-
+            bool testbool = true;
             var dictionary = new CustomDictionary();
-            var opgave1 = dictionary.Opgave1();
-            var opgave2 = dictionary.Opgave2();
+            Dictionary<string, int> opgave1 = dictionary.Opgave1();
+            Dictionary<float, bool> opgave2 = dictionary.Opgave2();
 
             Console.WriteLine("Opgave 1: Dictionary med string KEY og int VALUE");
             for (int i = 0; i < 10; i++)
@@ -108,7 +108,8 @@ namespace LibraryClassTest
             Console.WriteLine("\nOpgave2: Dictionary med float KEY og bool VALUE");
             for (float i = 0.0F; i < 10.0; i++)
             {
-                opgave2.Add(i, true);
+                opgave2.Add(i, testbool);
+                testbool = !testbool;
             }
             foreach (KeyValuePair<float, bool> item in opgave2)
             {
