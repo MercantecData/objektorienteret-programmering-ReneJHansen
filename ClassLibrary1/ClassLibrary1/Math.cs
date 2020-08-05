@@ -16,10 +16,14 @@ namespace ClassLibrary1
         }
         public string Plus(string a, string b)
         {
-            var int1 = int.Parse(a);
-            var int2 = int.Parse(b);
-            var add = int1 + int2;
-            return add.ToString();
+            bool success1 = int.TryParse(a, out int value1);
+            bool success2 = int.TryParse(b, out int value2);
+            if (success1 == true && success2 == true)
+            {
+                var add = value1 + value2;
+                return add.ToString();
+            }
+            else return "Uable to convert input";
         }
         public int Minus(int a, int b)
         {
@@ -31,10 +35,14 @@ namespace ClassLibrary1
         }
         public string Minus(string a, string b)
         {
-            var int1 = int.Parse(a);
-            var int2 = int.Parse(b);
-            var add = int1 - int2;
-            return add.ToString();
+            bool success1 = int.TryParse(a, out int value1);
+            bool success2 = int.TryParse(b, out int value2);
+            if (success1 == true && success2 == true)
+            {
+                var subtract = value1 - value2;
+                return subtract.ToString();
+            }
+            else return "Unable to convert input";
         }
         public int Multiply(int a, int b)
         {
@@ -46,10 +54,14 @@ namespace ClassLibrary1
         }
         public string Multiply(string a, string b)
         {
-            var int1 = int.Parse(a);
-            var int2 = int.Parse(b);
-            var add = int1 * int2;
-            return add.ToString();
+            bool success1 = int.TryParse(a, out int value1);
+            bool success2 = int.TryParse(b, out int value2);
+            if (success1 == true && success2 == true)
+            {
+                var multiply = value1 * value2;
+                return multiply.ToString();
+            }
+            else return "Unable to convert input";
         }
         public int Divide(int a, int b)
         {
@@ -61,10 +73,14 @@ namespace ClassLibrary1
         }
         public string Divide(string a, string b)
         {
-            var int1 = int.Parse(a);
-            var int2 = int.Parse(b);
-            var add = int1 / int2;
-            return add.ToString();
+            bool success1 = int.TryParse(a, out int value1);
+            bool success2 = int.TryParse(b, out int value2);
+            if (success1 == true && success2 == true)
+            {
+                var divide = value1 / value2;
+                return divide.ToString();
+            }
+            else return "Unable to convert input";
         }
     }
 }
