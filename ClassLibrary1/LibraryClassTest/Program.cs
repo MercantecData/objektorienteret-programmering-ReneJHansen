@@ -125,15 +125,5 @@ namespace LibraryClassTest
             // Another is by using dictionaryVariable.Add("KEY", VALUE); ten times
             // For the purpose of the assignment "Add ten items" using a loop simplifies it massively
         }
-
-        static void MathTest()
-        {
-            // ClassLibrary.math is to differenciate between the pre-coded Math class and my custom Math class
-            ClassLibrary1.Math math = new ClassLibrary1.Math();
-            
-            Console.WriteLine("int: 2 + 2 = " + math.Plus(2, 2));
-            Console.WriteLine("float: 2.2 + 2.2 = " + math.Plus(2.2f, 2.2f));
-            Console.WriteLine("string: \"2\" + \"2\" = " + math.Plus("2", "2"));
-        }
     }
 }

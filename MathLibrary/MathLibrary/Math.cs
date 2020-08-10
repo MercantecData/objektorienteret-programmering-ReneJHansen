@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ClassLibrary1
+namespace MathLibrary
 {
     public class Math
     {
@@ -23,7 +21,7 @@ namespace ClassLibrary1
                 var add = value1 + value2;
                 return add.ToString();
             }
-            else return "Uable to convert input";
+            else return "Unable to convert input";
         }
         public int Minus(int a, int b)
         {
