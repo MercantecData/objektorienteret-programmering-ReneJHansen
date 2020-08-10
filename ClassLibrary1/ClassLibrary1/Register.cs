@@ -9,13 +9,8 @@ namespace ClassLibrary1
         private List<Person> personRegister = new List<Person>();
         private List<Job> jobRegister = new List<Job>();
 
-        public List<Person> GetPersons()
-        {
-            return personRegister;
-        }
-        public List<Job> GetJobs()
-        {
-            return jobRegister;
-        }
+        public List<Person> GetPersons() => personRegister;
+
+        public List<Job> GetJobs() => jobRegister;
     }
 }

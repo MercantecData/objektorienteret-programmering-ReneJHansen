@@ -21,9 +21,6 @@ namespace School_Register
             this.enrolledList = enrolledList;
         }
 
-        public List<Student> GetStudents()
-        {
-            return enrolledList;
-        }
+        public List<Student> GetStudents() => enrolledList;
     }
 }

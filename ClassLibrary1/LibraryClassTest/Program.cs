@@ -23,11 +23,6 @@ namespace LibraryClassTest
                 Console.Clear();
                 DictionaryTest(); //Dictionaries
             }
-            else if (input == "3")
-            {
-                Console.Clear();
-                MathTest();
-            }
             else
             {
                 Console.WriteLine("Wrong input");

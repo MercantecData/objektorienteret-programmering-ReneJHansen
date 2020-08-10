@@ -20,18 +20,9 @@ namespace School_Register
             this.courses = courses;
         }
 
-        public List<Student> GetStudents()
-        {
-            return students;
-        }
-        public List<Employee> GetEmployees()
-        {
-            return employees;
-        }
-        public List<Course> GetCourses()
-        {
-            return courses;
-        }
+        public List<Student> GetStudents() => students;
+        public List<Employee> GetEmployees() => employees;
+        public List<Course> GetCourses() => courses;
 
         // Students
         public void Add(string name)
@@ -47,10 +38,7 @@ namespace School_Register
             list[index].name = newName;
         }
 
-        public void Remove(Student student)
-        {
-            students.Remove(student);
-        }
+        public void Remove(Student student) => students.Remove(student);
 
         // Teachers
         public void Add(string name, bool isTeacher, float salary, bool paidThisMonth)
@@ -68,10 +56,7 @@ namespace School_Register
             list[index].salary = salary;
             list[index].paidThisMonth = paidThisMonth;
         }
-        public void Remove(Employee employee)
-        {
-            employees.Remove(employee);
-        }
+        public void Remove(Employee employee) => employees.Remove(employee);
         
         // Courses
         public void Add(string courseName, int studentsEnrolled = 0, string teacher = null)
@@ -88,9 +73,6 @@ namespace School_Register
             list[index].students = studentsEnrolled;
             list[index].teacher = teacher;
         }
-        public void Remove(Course course)
-        {
-            courses.Remove(course);
-        }
+        public void Remove(Course course) => courses.Remove(course);
     }
 }

@@ -17,9 +17,6 @@ namespace School_Register
             this.courses = courses;
         }
 
-        public List<Course> GetCourses()
-        {
-            return courses;
-        }
+        public List<Course> GetCourses() => courses;
     }
 }

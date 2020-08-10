@@ -15,19 +15,10 @@ namespace ClassLibrary1
         {
         }
 
-        public Dictionary<string, int> Opgave1()
-        {
-            return opgave1;
-        }
+        public Dictionary<string, int> Opgave1() => opgave1;
 
-        public Dictionary<float, bool> Opgave2() 
-        {
-            return opgave2;
-        }
+        public Dictionary<float, bool> Opgave2() => opgave2;
 
-        public Dictionary<Person, int> PersonDictionary()
-        {
-            return personDic;
-        }
+        public Dictionary<Person, int> PersonDictionary() => personDic;
     }
 }

@@ -21,14 +21,7 @@ namespace School_Register
             this.paidThisMonth = paidThisMonth;
         }
 
-        public List<Course> GetCourses()
-        {
-            return courses;
-        }
-
-        public bool ReceivedPay()
-        {
-            return paidThisMonth;
-        }
+        public List<Course> GetCourses() => courses;
+        public bool ReceivedPay() => paidThisMonth;
     }
 }

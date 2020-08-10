@@ -1,8 +1,6 @@
 ﻿using School_Register;
 using System.Collections.Generic;
 using System;
-using System.Security.Cryptography.X509Certificates;
-using System.Linq;
 
 namespace SchoolRegisterTest
 {
