@@ -33,6 +33,25 @@ namespace MathTest
             string newString = "5";
             withStrings = math.Plus;
             Console.WriteLine("Delegates assignment but with strings: " + withStrings(newString, newString));
+
+
+            // Lambda assignments
+            // Lambda assignment 1 (int => int*2)
+            Lambda1 lambda1;
+            lambda1 = math.Lambda1;
+            Console.WriteLine("Lambda assignment: " + lambda1(number));
+
+            // Lambda assignment 2 (float,float,float => sum)
+            Lambda2 lambda2;
+            lambda2 = math.Lambda2;
+            Console.WriteLine("Lambda assignment 2: " + lambda2(fnumber, fnumber, fnumber));
+
+            // Lambda assignment 3 (nothing => "Hello world")
+            Lambda3 lambda3;
+            lambda3 = math.Lambda3;
+            Console.WriteLine("Lambda assignment 3: " + lambda3());
+
+            // Bonus assignment - Lambda expressions applied in Math.cs
         }
     }
 }
