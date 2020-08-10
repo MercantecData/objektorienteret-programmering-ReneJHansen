@@ -2,6 +2,9 @@
 
 namespace MathLibrary
 {
+    public delegate int WithInts(int a, int b);
+    public delegate float WithFloats(float a, float b);
+    public delegate string WithStrings(string a, string b);
     public class Math
     {
         public int Plus(int a, int b)
